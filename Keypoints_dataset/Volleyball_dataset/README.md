@@ -88,13 +88,6 @@ This repository is licensed under the MIT License. See the `LICENSE` file for de
     booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
     year = {2016}
   }
-  @inproceedings{msibrahiPAMI16deepactivity,
-    author = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
-    title = {Hierarchical Deep Temporal Models for Group Activity Recognition},
-    journal = {arXiv preprint arXiv:1607.02643},
-    year = {2016}
-  }
-
 
 
 

@@ -79,6 +79,23 @@ Each line in the `.txt` file follows this format:
 ## License
 This repository is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Acknowledgments
-- The volleyball dataset and tracking annotations are sourced from [(https://github.com/mostafa-saad/deep-activity-rec)].
-- This repository is intended for research purposes, focusing on action recognition and player tracking in volleyball videos.
+ Volleyball Dataset and tracking annotations are sourced from [mostafa-saad/deep-activity-rec](https://github.com/mostafa-saad/deep-activity-rec).[](https://github.com/mostafa-saad/deep-activity-rec/blob/master/README.md)
+- Please cite the following if using the extended dataset:
+  ```bibtex
+  @inproceedings{msibrahiCVPR16deepactivity,
+    author = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
+    title = {A Hierarchical Deep Temporal Model for Group Activity Recognition},
+    booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2016}
+  }
+  @inproceedings{msibrahiPAMI16deepactivity,
+    author = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
+    title = {Hierarchical Deep Temporal Models for Group Activity Recognition},
+    journal = {arXiv preprint arXiv:1607.02643},
+    year = {2016}
+  }
+
+
+
+
+

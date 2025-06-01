@@ -1,6 +1,9 @@
-# Volleyball Dataset Repository
+# Volleyball Dataset Keypoint Extraction with HRNet
 
-This repository contains code and resources for working with the **Volleyball Dataset** and the **Volleyball Tracking Annotation Dataset**, designed for tasks such as action recognition and player tracking in volleyball videos.
+This repository contains code and resources for extracting keypoint data (e.g., joint locations) from the **Volleyball Dataset** and **Volleyball Tracking Annotation Dataset** using HRNet (High-Resolution Network), a state-of-the-art model for human pose estimation. The datasets are sourced from [mostafa-saad/deep-activity-rec](https://github.com/mostafa-saad/deep-activity-rec), associated with the paper "A Hierarchical Deep Temporal Model for Group Activity Recognition" (CVPR 2016).
+
+## Project Overview
+The goal is to process video frames from the Volleyball Dataset, use the provided bounding box annotations to localize players, and apply HRNet to extract keypoints (e.g., shoulders, elbows, knees) for action recognition and player tracking in volleyball videos.
 
 ## Volleyball Dataset Summary
 

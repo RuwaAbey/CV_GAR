@@ -80,5 +80,5 @@ Each line in the `.txt` file follows this format:
 This repository is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgments
-- The volleyball dataset and tracking annotations are sourced from [original dataset source, if available].
+- The volleyball dataset and tracking annotations are sourced from [(https://github.com/mostafa-saad/deep-activity-rec)].
 - This repository is intended for research purposes, focusing on action recognition and player tracking in volleyball videos.

@@ -52,21 +52,6 @@ Each line in the `.txt` file follows this format:
   - Consult dataset documentation or analyze patterns to confirm their purpose.
 - **Action Class**: Player’s action (e.g., `digging`, `standing`).
 
-## Usage Notes
-- **Preprocessing**:
-  - Parse `annotations.txt` for frame-level activity classes and player bounding boxes.
-  - Parse tracking `.txt` files for player tracking across 21-frame windows.
-  - Normalize bounding box coordinates for videos with different resolutions (1920x1080 or 1280x720).
-- **Tasks**:
-  - **Action Recognition**: Use frame-level and player-level action classes for team or individual action classification.
-  - **Player Tracking**: Use bounding box data for multi-object tracking tasks.
-  - **Temporal Analysis**: Leverage the 41-frame (main dataset) or 21-frame (tracking dataset) windows for sequence modeling.
-- **Tools**:
-  - Use OpenCV for video frame extraction, Pandas for parsing annotations, and PyTorch/TensorFlow for model training.
-- **Resolution Handling**:
-  - Check video IDs to confirm resolution and adjust coordinates accordingly.
-  - Normalize coordinates (e.g., divide by width/height) for consistent processing.
-
 ## Repository Structure
 - `data/`: Placeholder for dataset files (not included due to size; download from the original source).
 - `scripts/`: Python scripts for parsing annotations, extracting frames, and analysis.
@@ -80,8 +65,6 @@ Each line in the `.txt` file follows this format:
 4. **Contribute**: Add your own scripts, models, or visualizations to the repository.
 
 ## License
-This repository is licensed under the MIT License. See the `LICENSE` file for details.
-
  Volleyball Dataset and tracking annotations are sourced from [mostafa-saad/deep-activity-rec](https://github.com/mostafa-saad/deep-activity-rec).[](https://github.com/mostafa-saad/deep-activity-rec/blob/master/README.md)
 - Please cite the following if using the extended dataset:
   ```bibtex

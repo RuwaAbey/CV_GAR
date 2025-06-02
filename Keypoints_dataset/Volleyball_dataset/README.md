@@ -109,6 +109,7 @@ The script saves the processed data to a `.pkl` file (e.g., `volleyball_bboxes.p
         }
     }
 }
+```
 
 # Volleyball Dataset Keypoint Extraction
 
@@ -117,21 +118,15 @@ This script processes the **Volleyball dataset** to extract 2D pose keypoints us
 ---
 
 🧠 Model Used
-Model: HRNet-W32
-
-Dataset: COCO 2D keypoints
-
-Resolution: 256x192
-
-Config File: td-hm_hrnet-w32_8xb64-210e_coco-256x192.py
-
-Weights File: hrnet_w32_coco_256x192.pth
+-Model: HRNet-W32
+-Dataset: COCO 2D keypoints
+-Config File: td-hm_hrnet-w32_8xb64-210e_coco-256x192.py
+-Weights File: hrnet_w32_coco_256x192.pth
 
 🚀 How to Run
-bash
-Copy
-Edit
+```
 python pose_extraction.py
+```
 This will:
 
 Load bounding boxes from volleyball_bboxes.pkl
@@ -145,9 +140,7 @@ Save keypoints in volleyball_keypoints.pkl
 📦 Output Format
 The output is a nested dictionary saved as a pickle file:
 
-python
-Copy
-Edit
+```
 {
     video_id: {
         target_frame: {
@@ -155,13 +148,11 @@ Edit
         }
     }
 }
-video_id: Integer identifier of the video
-
-target_frame: Middle frame of a 10-frame window
-
-frame_id: Frame number in that window
-
-keypoints: Numpy array with (x, y, score) for each of 17 COCO keypoints per person
+```
+-video_id: Integer identifier of the video
+-target_frame: Middle frame of a 10-frame window
+-frame_id: Frame number in that window
+=keypoints: Numpy array with (x, y, score) for each of 17 COCO keypoints per person
 
 If fewer than 12 people are detected, zero-padding is applied
 

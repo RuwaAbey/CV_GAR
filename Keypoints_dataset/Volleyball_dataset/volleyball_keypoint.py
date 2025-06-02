@@ -101,7 +101,7 @@ def main():
     # Final keypoint storage dict
     keypoint_dict = {}
 
-    for video_id in range(1):
+    for video_id in range(55):
         video_base_path = os.path.join(dataset_path, str(video_id))
         if not os.path.isdir(video_base_path):
             continue

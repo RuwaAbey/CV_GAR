@@ -75,6 +75,27 @@ Each line in the `.txt` file follows this format:
     year = {2016}
   }
 
+# Volleyball Tracking Annotation Processor
+
+## Overview
+
+This script processes the Volleyball Tracking Annotation Dataset, which contains bounding box annotations for volleyball game sequences. The script reads the dataset, organizes the bounding box data into a nested dictionary, and saves it to a `.pkl` file for further use (e.g., in group activity recognition tasks).
+
+The dataset is structured as `seq_id/middle_frame/middle_frame.txt`, where:
+- `seq_id` is the sequence identifier (e.g., `0`, `1`, `3`, etc.).
+- `middle_frame` is the middle frame number of a sequence (e.g., `24730`).
+- `middle_frame.txt` contains bounding box annotations for 20 frames: 10 frames before the middle frame, the middle frame itself, and 9 frames after.
+
+The script ensures that sequences and middle frames are processed in ascending order.
+## Usage
+
+1. **Set the Dataset Path**:
+   - Update the `dataset_path` in the `main` function to point to your dataset directory.
+   - Example: `dataset_path = "/path/to/volleyball_tracking_annotation/"`
+
+2. **Run the Script**:
+   ```bash
+   python volleyball_bbox.py
 
 
 

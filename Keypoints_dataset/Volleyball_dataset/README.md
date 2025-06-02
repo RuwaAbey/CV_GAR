@@ -96,6 +96,19 @@ The script ensures that sequences and middle frames are processed in ascending o
 2. **Run the Script**:
    ```bash
    python volleyball_bbox.py
+   
+## Output File Data Format
+
+The script saves the processed data to a `.pkl` file (e.g., `volleyball_bboxes.pkl`) using the `pickle` module. The output data is structured as a nested dictionary with the following format:
+
+```python
+{
+    seq_id (int): {
+        middle_frame (int): {
+            frame_id (int): np.array([[x_min, y_min, x_max, y_max], ...], dtype=np.int32)
+        }
+    }
+}
 
 
 

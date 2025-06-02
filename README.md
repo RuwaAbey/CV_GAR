@@ -16,10 +16,9 @@ To run this project, ensure you have the following dependencies installed:
 - Libraries: 
   - `numpy`
   - `opencv-python`
-  - `torch` or `tensorflow` (depending on the model used)
-  - `pandas`
+  - `torch` 
   - `scikit-learn`
   - (Add other dependencies as needed based on specific scripts)
-- Optional: GPU support for faster training (CUDA-compatible GPU recommended)
+- GPU support for faster training (CUDA-compatible GPU recommended)
 - Dataset: [Collective Activity Dataset or Volleyball Dataset]
 

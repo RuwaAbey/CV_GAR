@@ -35,7 +35,7 @@ The goal is to process video frames from the Volleyball Dataset, use the provide
 - Organized into directories named `seq01`, `seq02`, etc., each corresponding to a sequence.
 - Each sequence directory contains a subdirectory named after the **middle frame** (e.g., `seq01/3595`).
 - Inside this subdirectory, a `.txt` file (e.g., `3595.txt`) contains bounding box annotations for a 21-frame window:
-- 10 frames before, the middle frame, and 10 frames after.
+- 10 frames before, the middle frame, and 9 frames after.
 - Example: For middle frame 29885, annotations cover frames 29875 to 29895.
 
 ### Annotation Format

@@ -110,5 +110,13 @@ The script saves the processed data to a `.pkl` file (e.g., `volleyball_bboxes.p
     }
 }
 
+# Volleyball Dataset Keypoint Extraction
+
+This script processes the **Volleyball dataset** to extract 2D pose keypoints using a pre-trained **HRNet model** from [MMPose](https://github.com/open-mmlab/mmpose). It uses existing bounding box annotations to perform pose estimation and saves the output as a `.pkl` file.
+
+---
+
+## 📁 Folder Structure
+
 
 

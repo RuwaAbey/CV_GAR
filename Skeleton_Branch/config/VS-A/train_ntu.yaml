@@ -1,0 +1,45 @@
+work_dir: ./work_dir/ZT_V-SA
+model_saved_name: ./runs/ZT_V-SA
+
+# feeder
+feeder: feeders.feeder.Feeder
+num_worker: 32
+train_feeder_args:
+  data_path: ./dataset/data.npy
+  label_path: ./dataset/data_label.pkl
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: -1
+  normalization: True
+
+test_feeder_args:
+  data_path: ./dataset/data.npy
+  label_path: ./dataset/data_label.pkl
+  normalization: True
+
+# model
+model: model.zoom_transformer.Model
+model_args:
+  num_class: 15
+  num_person: 2
+  num_point: 17
+  num_head: 6
+  in_channels: 3
+  graph: graph.volleyball.AdjMatrixGraph
+  graph_args:
+    labeling_mode: 'spatial'
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+step: [30, 40, 50]
+
+# training
+device: [0]
+batch_size: 4
+test_batch_size: 2
+num_epoch: 60
+nesterov: True
+warm_up_epoch: 2

@@ -1,0 +1,33 @@
+work_dir: './work_dir/fusion'
+model_saved_name: 'fusion_model'
+phase: 'train'
+save_score: True
+seed: 1
+print_log: True
+show_topk: [1, 5]
+feeder: 'feeders.feeder.Feeder'
+num_worker: 4
+train_feeder_args:
+  data_path: ./dataset/volleyball_dataset/data_3/output/train_data.npy
+  label_path: ./dataset/volleyball_dataset/data_3/output/train_label.pkl
+test_feeder_args:
+  data_path: ./dataset/volleyball_dataset/data_3/output/test_data.npy
+  label_path: ./dataset/volleyball_dataset/data_3/output/test_label.pkl
+spatial_model: model.zoom_new_2.Model
+temporal_model: model.temporal_transformer_3.Model
+spatial_weights: ./best_weight/ZT_V-SA_best_spatial.pt
+temporal_weights: ./best_weight/ZT_V-SA_best_temporal.pt
+model_args:
+  num_class: 8
+  in_channels: 3
+  num_person: 12
+  num_point: 17
+  num_head: 6
+  graph: graph.volleyball.AdjMatrixGraph
+  graph_args:
+     labeling_mode: 'spatial'  # Both models use the same graph for consistency
+device: [1]
+train_batch_size: 16
+test_batch_size: 16
+num_epochs: 60
+lr: 0.001

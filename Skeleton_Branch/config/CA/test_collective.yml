@@ -1,0 +1,29 @@
+# feeder
+feeder: feeders.feeder.Feeder
+test_feeder_args:
+  data_path: ./dataset/collective_dataset/test_data.npy
+  label_path: ./dataset/collective_dataset/test_label.pkl
+  debug: False
+
+# model
+model: model.zoom_transformer.Model
+model_args:
+  num_class: 4
+  num_person: 13
+  num_point: 17
+  num_head: 6
+  in_channels: 3
+  graph: graph.volleyball.AdjMatrixGraph
+  graph_args:
+    labeling_mode: 'spatial'
+
+
+# test 
+phase: test
+device: [1]
+test_batch_size: 18
+weights: ./weights/model_ca-43.pt
+
+work_dir: ./work_dir
+model_saved_name: ./work_dir/model_ca
+save_score: True

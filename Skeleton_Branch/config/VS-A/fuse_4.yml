@@ -1,0 +1,31 @@
+work_dir: ./work_dir/fusion
+model_saved_name: fusion_model
+phase: train
+save_score: true
+seed: 1
+print_log: true
+show_topk: [1, 5]
+feeder: feeders.feeder.Feeder
+num_worker: 4
+train_feeder_args:
+  data_path: ./dataset/volleyball_dataset/data_3/output/test_data.npy
+  label_path: 
+  debug: False
+test_feeder_args:
+  data_path: ./data/test_data.npy
+  label_path: ./data/test_labels.npy
+  debug: false
+spatial_model: model.zoom_new_2.Model
+temporal_model: model.temporal_transformer_3.Model
+spatial_weights: null
+temporal_weights: null
+model_args:
+  num_classes: 8
+  input_dim: 256
+device: [1]
+test_batch_size: 16
+learning_rate: 0.01
+num_epoch: 60
+optimizer: SGD
+weight_decay: 0.0001
+save_interval: 10

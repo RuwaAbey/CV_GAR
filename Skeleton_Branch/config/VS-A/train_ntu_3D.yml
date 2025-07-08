@@ -1,0 +1,45 @@
+work_dir: ./work_dir/ZT_NTU60  
+model_saved_name: ./runs/ZT_NTU60
+
+# feeder
+feeder: feeders.feeder.Feeder
+num_worker: 8
+train_feeder_args:
+  data_path: ./data/ntu/xsub/train_data_joint.npy
+  label_path: ./data/ntu/xsub/train_label.pkl
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: -1
+  normalization: True
+
+test_feeder_args:
+  data_path: ./data/ntu/xsub/val_data_joint.npy
+  label_path: ./data/ntu/xsub/val_label.pkl
+  normalization: True
+
+# model
+model: model.zoom_new_2.Model
+model_args:
+  num_class: 60
+  num_person: 2
+  num_point: 25
+  num_head: 6
+  in_channels: 3
+  graph: graph.ntu_rgb.AdjMatrixGraph
+  graph_args:
+    labeling_mode: 'spatial'
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+step: [30, 40, 50]
+
+# training
+device: [1]
+batch_size: 4
+test_batch_size: 4
+num_epoch: 60
+nesterov: True
+warm_up_epoch: 2
